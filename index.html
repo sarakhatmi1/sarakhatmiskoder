@@ -1,7 +1,7 @@
-<!dokutype html>
+<!doctype html>
 <html lang=en>
  <head>
-  <meta charset=utf-8
+  <meta charset=utf-8>
   <title>Saras koder</title>
   <link href="./mains.css" rel="stylesheet" type="text/css">
  </head>
@@ -9,12 +9,12 @@
   <h1>Fråga Sara</h1>
   <div class="inputsection">
     <div class="inputs">
-     <input placeholder="say something"</input>
+     <input placeholder="something"></input>
     </div>
     <button class="addoption">Add</button>
   </div>
   <div class="resultsection"></div>
-  <button>Go!</button>
+  <button class="submit">Go!</button>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script>
@@ -24,8 +24,20 @@
     var add_option = function() {
       $(".inputs").append("<input></input>")
     }
-
     $(".addoption").click(add_option)
+
+    var options = []
+    var submit = function() {
+     $(".inputsection").hide()
+     $(".resultsection").css("display", "flex")
+     $("input").each(function() {
+       options.push($(this).val())
+     })
+     var winner = options[Math.floor(Math.random() * options.length)]
+     console.log(winner)
+     $(".resultsection").text(winner)
+    }
+    $(".submit").click(submit)
   })
   </script>
  </body>

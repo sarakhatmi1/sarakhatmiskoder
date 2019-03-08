@@ -3,18 +3,21 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top:
+  margin-top:150px;
 }
-h1{
+
+h1 {
   font-weight: lighter;
   font-size: 40px;
   letter-spacing: 2px;
   margin-bottom: 0px;
 }
+
 .inputsection {
   margin: 50px 0px 80px 0px;
   width: 400px;
 }
+
 .inputs {
   width: inherit;
   display:flex;
@@ -23,9 +26,17 @@ h1{
 
 input {
   margin-top: 10px
-
 }
+
 .addoption {
   margin-top: 10px;
+}
+
+.resultsection {
+  height: 300px
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
   
 }
